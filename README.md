@@ -1,29 +1,29 @@
 # ChicoRei
 
-📌 Finalidade:
+📌 **Finalidade:**
 
 - Este repositório tem por objetivo trazer todas as respostas relacionadas às questões do Teste Técnico FullStack 2025 da Chico Rei.
 
 ----------------------------------
 
-📌 Instruções:
+📌 **Instruções:**
 
 - As questões discursivas dos exercícios de 01 a 13 estão dividas em pastas, onde cada pasta representa uma questão.
 
 ----------------------------------
 
-📌 Requisitos:
+📌 **Requisitos:**
 
 - Antes de iniciar, certifique-se de ter os seguintes itens instalados:
 
-    PHP 8.x e Composer
-    Node.js 18+ e npm
-    Banco de dados (MySQL, PostgreSQL, etc.)
-    Laravel Installer (opcional)
+    `- PHP 8.x e Composer`
+    `- Node.js 18+ e npm`
+    `- Banco de dados (MySQL, PostgreSQL, etc.)`
+    `- Laravel Installer (opcional)`
 
 ----------------------------------
 
-📌 Instalação:
+📌 **Instalação:**
 
 1 - Clonando o repositório:
 
