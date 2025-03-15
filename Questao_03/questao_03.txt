@@ -1,0 +1,18 @@
+3 - APIs
+Um endpoint da API está demorando muito para responder. Quais técnicas você usaria para identificar e resolver esse problema no backend?
+
+----------------------------
+
+Resposta:
+
+Como forma de promover uma identificação do problema, eu faria um processo de debug no código em alguns trechos da execução desejada.
+A medida que o andamento do teste vai progredindo, o debug vai sendo movido em cada módulo do log de execução. Muitas vezes o processo de resposta pode estar demorando por alguns fatores:
+- Referências dentro do código e conexão incorretas (como, por exemplo, queries com inúmeros JOINS sem necessidade);
+- Falta de clareza ou processos repetitivos sem necessidade (muitos laços, por exemplo);
+- Escolhas de implementação que não levam em consideração o tempo de execução.
+
+Como melhorias a serem feitas:
+- Um estudo de como os dados estão sendo inseridos, procurados, requisitados, seria fundamental. Talvez possam ter muitas cláusulas WHERE, JOIN, INNER JOIN, por exemplo. Reduzir quando necessário é importante e trazer cláusula INDEX pode auxiliar em alguns casos.
+- Utilizar cache para a comunicação com a API, evitando armazenamentos excessivos no banco de dados.
+- Estruturar, modularizar e documentar o código e a aplicação. Facilitando todo o processo de verificação de possíveis gargalos que são ocasionados por escolhas "ruins" de implementação.
+- Possivelmente trabalhar com um número maior de limite de execução.
