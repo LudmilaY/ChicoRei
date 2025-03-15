@@ -17,4 +17,5 @@ Para lidar com fluxo de login, o ideal seria criar um caminho dentro de uma past
 - Acesso remoto;
 - Seção de login.
 
-Para tal, uma abordagem utilizando o Laravel Sanctum, Passposrt ou até mesmo um Web Token permite que esse fluxo fique mais seguro, onde o usuário possa inserir os dados sensíveis tais como, e-mail/login e senha. A requisição desse processo passa a informação para o Laravel que realizará a validação e retorna um token. O Vue armazena esse token de forma segura através de protocolo específico de HTTP, além de fazer o envio do token no cabeçalho. O token é apenas uma expressão de que os processos estão sendo respeitados e podem avançar para o próximo e, por tanto, quando o usuário efetua um logout, o token é removido.
+Para tal, uma abordagem utilizando o Laravel Sanctum, Passposrt ou até mesmo um Web Token permite que esse fluxo fique mais seguro, onde o usuário possa inserir os dados sensíveis tais como, e-mail/login e senha.
+A requisição desse processo passa a informação para o Laravel que realizará a validação e retorna um token. O Vue armazena esse token de forma segura através de protocolo específico de HTTP, além de fazer o envio do token no cabeçalho. O token é apenas uma expressão de que os processos estão sendo respeitados e podem avançar para o próximo e, por tanto, quando o usuário efetua um logout, o token é removido.
