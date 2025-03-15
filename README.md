@@ -28,18 +28,25 @@
 1 - Clonando o repositório:
 
 git clone https://github.com/LudmilaY/ChicoRei.git
+
 cd pasta-do-repositorio
+
 
 2 - Configurando o back-end (Laravel):
 
 cp .env.exemplo .env        # Cria o arquivo de configuração
+
 composer install            # Instala as dependências do Laravel
+
 php artisan key:generate    # Gera a chave de segurança do Laravel
+
 php artisan serve           # Inicia o servidor Laravel
+
 
 3 - Configurando o front-end (Vue):
 
 npm install     # Instala as dependências do Vue e JavaScript
+
 npm run dev     # Inicia o servidor Vue e compila o código
 
 ----------------------------------
