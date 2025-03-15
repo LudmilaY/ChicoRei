@@ -1,0 +1,12 @@
+1- Vue.js
+Explique como funciona o ciclo de vida de um componente em Vue.js e como isso influencia na performance de uma aplicação.
+
+----------------------------
+
+Resposta:
+
+Por ciclio de vida, têm-se etapas de Criação, Montagem, Atualização e Desmontagem, encerrando, literalmente, um ciclio. No Vue, essas etapas representam, respectivamente:
+- Basicamente é a etapa que vai instanciar o componente. Podem ser feitas chamadas de API.
+- Processo em que já ocorreu compilação, mas ainda não foram inseridos no DOM as alterações. É nessa etapa que o componente pode ser inserido no DOM.
+- Etapa de subir as mudanças que foram detectadas (como se fosse um controle de versão do GitHub)
+- A etapa de destruição indica que um componente pode ter sofrido uma alteração e não esteja mais visível ou ainda por alguma condição que ocasione em remoção do mesmo. Nesse caso, opta-se pela destruição do componente a fim de liberar memória, por exemplo.
