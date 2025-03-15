@@ -8,7 +8,8 @@
 
 ## 📌 **Instruções:**
 
-- As questões discursivas dos exercícios de 01 a 13 estão dividas em pastas, onde cada pasta representa uma questão.
+- As questões discursivas dos exercícios de 01 a 13 estão dividas em pastas, onde cada pasta representa uma questão. Antes de cada resposta, haverá a apresentação do enunciado, a fim de melhorar a visualização da resposta.
+- Se a questão for inteiramente textual, o enunciado será apresentado como texto, se a questão envolver código, o enunciado será apresentado como comentário dentro do código e terá uma indicação na pasta que é uma questão para ser compilada.
 
 ----------------------------------
 
