@@ -1,0 +1,9 @@
+4- Integrações
+Como a utilização de CDN melhora a performance de uma aplicação web.
+
+----------------------------
+
+Resposta:
+
+Em termos de Edge Computing, utilizar um CDN faz com que, geograficamente, alguns servidores estejam localizados em diversas partes do mundo de modo a atender o tráfego de usuários e, assim, proporcionar um acesso mais rápido.
+Sendo assim, as demandas que os usuários requisitam estão mais próximas à borda da rede (Edge). Em uma aplicação web, por exemplo um e-commerce, o catálogo de itens precisa ser acessado rapidamente a custo de perder visitantes/compradores se a entrega for muito demorada de ser acessada.
