@@ -1,0 +1,3 @@
+5 - Engenharia de Software e Banco de Dados
+Em uma aplicação Laravel utilizando MySQL (RDS), por que seria interessante usar Memcached ou ElasticCache? Como essas tecnologias ajudam na escalabilidade?
+
