@@ -1,3 +1,9 @@
 5 - Engenharia de Software e Banco de Dados
 Em uma aplicação Laravel utilizando MySQL (RDS), por que seria interessante usar Memcached ou ElasticCache? Como essas tecnologias ajudam na escalabilidade?
 
+----------------------------
+
+Resposta:
+
+Alguns dados não necessitam de serem armazenados na aplicação diretamente. É o caso de logs antigos, por exemplo. Ou ainda, alguns dados voláteis de sessão de login, troca de senha, troca de e-mail, ou seja, alterações cadastrais gerais.
+Sendo assim, utilizar Memcached ou ElasticCache faz que o acesso ao Banco de Dados não seja necessário de ser feito o tempo todo, melhorando assim grandes volumes de tráfego.
