@@ -1,0 +1,10 @@
+6 - Engenharia de Software e Banco de Dados
+O que acha de algo como: Quais as vantagens e desvantagens em utilizar o Eloquent do Laravel? Existe algum possível problema recorrente (N+1 queries)?
+
+----------------------------
+
+Resposta:
+
+Uma das vantagens de usar o Eloquent é de facilitar a escrita e proporcionar um código mais fluido. Por exemplo, um model que possui escritas, consultas, etc. de Banco de Dados terá muitas queires de SQL, ao usar o Eloquent a criação, escrita, etc. ficam mais limpas e facilita portanto, a visualização do código como um todo.
+Outras vantagens é que o Eloquent permite sumarizar relações de SQL tais como "where", "join", "orderBy", "hasOne", etc. facilitando ainda mais aplicar métodos diferentes dentro do Banco de Dados.
+Por permitir algumas vantagens, ao ter um cenário de sucessivas consultas ao SQL, acaba que ocorre uma performance mais inferior em grandes volumes de dados, necessitando de processamentos em partes ao invés de requisições diretas. Se necessário for utilizar uma query mais complexa, talvez seja melhor construir no model uma query SQL ao invés do Eloquent.
