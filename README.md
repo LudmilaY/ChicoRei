@@ -40,7 +40,7 @@ cd pasta-do-repositorio
 2 - Configurando o back-end (Laravel):
 
 ```sh
-cp .env.exemplo .env        # Cria o arquivo de configuração
+cp .env.example .env        # Cria o arquivo de configuração
 composer install            # Instala as dependências do Laravel
 php artisan key:generate    # Gera a chave de segurança do Laravel
 php artisan serve           # Inicia o servidor Laravel
@@ -57,7 +57,7 @@ npm run dev     # Inicia o servidor Vue e compila o código
 
 ## 📌 **Uso:**
 
-WIP
+As questões 10 e 12 foram feitas utilizando Docker como uma forma de encapsular os projetos e facilitar na hora de rodar os experimentos.
 
 
 
