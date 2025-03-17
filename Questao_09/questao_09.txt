@@ -1,0 +1,66 @@
+9 - O que você entende do log abaixo?
+
+[2018-05-16 01:07:31] production.ERROR: Call to a member function getImage() on null {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to a member function getImage() on null at /admin/app/Models/Imagem.php:147)
+[stacktrace]
+#0 /admin/vendor/laravel/framework/src/Illuminate/Cache/Repository.php(362): ChicoRei\\Models\\Imagem->ChicoRei\\Models\\{closure}()
+#1 /admin/app/Models/Imagem.php(157): Illuminate\\Cache\\Repository->rememberForever('products_667_im...', Object(Closure))
+#2 /admin/app/Transformers/ImagemTransformer.php(25): ChicoRei\\Models\\Imagem->getThumbs()
+#3 /admin/vendor/league/fractal/src/Scope.php(338): ChicoRei\\Transformers\\ImagemTransformer->transform(Object(ChicoRei\\Models\\Imagem))
+#4 /admin/vendor/league/fractal/src/Scope.php(278): League\\Fractal\\Scope->fireTransformer(Object(ChicoRei\\Transformers\\ImagemTransformer), Object(ChicoRei\\Models\\Imagem))
+#5 /admin/vendor/league/fractal/src/Scope.php(208): League\\Fractal\\Scope->executeResourceTransformers()
+#6 /admin/vendor/league/fractal/src/TransformerAbstract.php(151): League\\Fractal\\Scope->toArray()
+#7 /admin/vendor/league/fractal/src/TransformerAbstract.php(123): League\\Fractal\\TransformerAbstract->includeResourceIfAvailable(Object(League\\Fractal\\Scope), Object(ChicoRei\\Models\\Produto), Array, 'capa')
+#8 /admin/vendor/league/fractal/src/Scope.php(363): League\\Fractal\\TransformerAbstract->processIncludedResources(Object(League\\Fractal\\Scope), Object(ChicoRei\\Models\\Produto))
+#9 /admin/vendor/league/fractal/src/Scope.php(342): League\\Fractal\\Scope->fireIncludedTransformers(Object(ChicoRei\\Transformers\\ProdutoTransformer), Object(ChicoRei\\Models\\Produto))
+#10 /admin/vendor/league/fractal/src/Scope.php(278): League\\Fractal\\Scope->fireTransformer(Object(ChicoRei\\Transformers\\ProdutoTransformer), Object(ChicoRei\\Models\\Produto))
+#11 /admin/vendor/league/fractal/src/Scope.php(208): League\\Fractal\\Scope->executeResourceTransformers()
+#12 /admin/app/Factories/ResponseFactory.php(209): League\\Fractal\\Scope->toArray()
+#13 /admin/app/Factories/ResponseFactory.php(77): ChicoRei\\Factories\\ResponseFactory->handleItem(Object(ChicoRei\\Models\\Produto), Object(ChicoRei\\Transformers\\ProdutoTransformer))
+#14 /admin/app/Http/Controllers/Api/ProdutoController.php(181): ChicoRei\\Factories\\ResponseFactory->create(Object(ChicoRei\\Models\\Produto))
+#15 /admin/vendor/laravel/framework/src/Illuminate/Cache/Repository.php(362): ChicoRei\\Http\\Controllers\\Api\\ProdutoController->ChicoRei\\Http\\Controllers\\Api\\{closure}()
+#16 /admin/app/Http/Controllers/Api/ProdutoController.php(182): Illuminate\\Cache\\Repository->rememberForever('products_667_in...', Object(Closure))
+#17 [internal function]: ChicoRei\\Http\\Controllers\\Api\\ProdutoController->info(Object(ChicoRei\\Models\\Produto))
+#18 /admin/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#19 /admin/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('info', Array)
+#20 /admin/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(ChicoRei\\Http\\Controllers\\Api\\ProdutoController), 'info')
+#21 /admin/vendor/laravel/framework/src/Illuminate/Routing/Route.php(169): Illuminate\\Routing\\Route->runController()
+#22 /admin/vendor/laravel/framework/src/Illuminate/Routing/Router.php(659): Illuminate\\Routing\\Route->run()
+#23 /admin/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /admin/vendor/barryvdh/laravel-cors/src/HandleCors.php(36): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /admin/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(149): Barryvdh\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /admin/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /admin/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /admin/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 /admin/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /admin/app/Http/Middleware/AuthenticateApi.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /admin/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(149): ChicoRei\\Http\\Middleware\\AuthenticateApi->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /admin/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /admin/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /admin/vendor/laravel/framework/src/Illuminate/Routing/Router.php(661): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 /admin/vendor/laravel/framework/src/Illuminate/Routing/Router.php(636): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#36 /admin/vendor/laravel/framework/src/Illuminate/Routing/Router.php(602): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#37 /admin/vendor/laravel/framework/src/Illuminate/Routing/Router.php(591): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#38 /admin/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#39 /admin/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#40 /admin/app/Http/Middleware/Localize.php(38): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /admin/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(149): ChicoRei\\Http\\Middleware\\Localize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /admin/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /admin/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /admin/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 /admin/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /admin/vendor/barryvdh/laravel-cors/src/HandlePreflight.php(35): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /admin/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(149): Barryvdh\\Cors\\HandlePreflight->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 /admin/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 /admin/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /admin/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#51 /admin/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#52 /admin/public/index.php(53): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#53 {main}
+"}
+
+----------------------------
+
+Resposta:
+
+O log apresentado representa um erro do servidor de produção em que a funcionalidade de componentes de origem Route não foram entregues corretamente, ou seja, existem conflitos de rotas impossibilitando subir a imagem referenciada logo no começo do log (null).
+O erro de instanciar um objeto nulo interferiu posteriormente no Route e em outras chamdas de framework, possivelmente a tela exibida seria inteira de erro ao invés de ser funcional.
