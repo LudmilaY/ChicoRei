@@ -1,0 +1,9 @@
+8 -  Engenharia de Software e Banco de Dados
+Quando é interessante utilizar transactions?
+
+----------------------------
+
+Resposta:
+
+Transactions podem ser usadas no Laravel além do Banco de Dados. Quando há uma dependência maior entre uma operação no Banco de Dados e outra que só será avançada se a primeira for cumprida.
+Por exemplo, um controle de estoque se beneficia bastante de Transactions pois as operações permitem ao sistema controlar todo o caminho que chega desde o requisito de um pedido até ao registro do pagamento.
