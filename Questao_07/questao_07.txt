@@ -1,0 +1,9 @@
+7 - Engenharia de Software e Banco de Dados
+Explique como implementar um sistema de filas assíncronas no Laravel. Para que tipo de funcionalidades essa abordagem é útil?
+
+----------------------------
+
+Resposta:
+
+O sistema ao ser requisitado entregar ao usuário as solicitações e elabora uma fila de entregas. Ao optar pela assincronissidade do Laravel, essas requisições podem ser entregues paralelamente, evitando assim demora de resposta, sobrecarregamento do servidor.
+Sendo assim, cada tarefa que for ser executada vai para a fila do Laravel como, por exemplo, um envio de e-mail que não necessita de envio imediato (como num caso de informar que um produto foi enviado).
