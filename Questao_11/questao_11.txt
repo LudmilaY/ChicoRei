@@ -1,0 +1,34 @@
+11 - Critique o código abaixo e como poderia ser melhorado:
+
+    /**
+     * @param InterfaceItemPedido $orderItem
+     * @return array
+     */
+    public function transform(InterfaceItemPedido $orderItem)
+    {
+        return [
+            'item_pedido_id' => $orderItem->getId(),
+            'product_id' => $orderItem->getProductId(),
+            'quantity' => $orderItem->getQuantity(),
+            'price' => $orderItem->getPrice(),
+            'total_price' => $orderItem->getTotalPrice(),
+            'discount' => $orderItem->getDiscount(),
+            'product_name' => $orderItem->getProduct()->getName(),
+            'link_rewrite' => $orderItem->getProduct()->getLinkRewrite(),
+            'size_name' => $orderItem->getSize()->getName(),
+            'gender' => $orderItem->getSize()->getGender(),
+            'gender_name' => $orderItem->getSize()->getLongGender(),
+            'active' => $orderItem->getProduct()->isActive(),
+            'type' => $orderItem->getProduct()->getType()
+        ];
+    }
+
+----------------------------
+
+Resposta:
+
+A disposição de interface do pedido está como um array. A princípio funciona bem, mas pode ficar mais leve de ser processado se for tratado como um objeto e transferência de dados.
+Algumas chamadas repetitivas como getProduct() e getSize() podem ficar visualmente mais fáceis de ler se declaradas antes do array:
+    $product = $orderItem->getProduct();
+    $size = $orderItem->getSize();
+Tornando o código mais limpo. Se necessário, adicionar um cache pode ajudar em questão de desempenho.
