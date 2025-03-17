@@ -1,0 +1,25 @@
+13 - Experiência Profissional
+Descreva um projeto desafiador em que você trabalhou recentemente como desenvolvedor full-stack. Em sua resposta, inclua:
+
+Contexto: Qual era o propósito do projeto e quais eram seus objetivos?
+Desafios: Que desafios técnicos ou de gerenciamento de projetos você enfrentou?
+Soluções: Quais foram as soluções que você implementou para superar esses desafios? Como você utilizou tecnologias como Vue.js, Laravel, ou qualquer outra mencionada na descrição da vaga?
+Impacto: Quais foram os resultados do projeto em termos de desempenho da equipe, satisfação do cliente ou melhorias no produto?
+Lições Aprendidas: Que lições você tirou dessa experiência que poderia aplicar em projetos futuros?
+
+----------------------------
+
+Resposta:
+
+- Contexto: foram dois projetos de aplicação web de clientes voltados para a área de educação. O objetivo em um dos projetos (aqui vou chamar esse projeto de "projeto 1") é de manutenir o site e executar as demandas que o cliente pede. O outro projeto (aqui vou chamar esse projeto de "projeto 2") segue a mesma linha, porém com mais complexidade pois envolve analisar código, testar, etc.
+
+- Desafios: No projeto 1 o desafio técnico foi entender todo o contexto de implementação do site, pois o mesmo já estava pronto e eu assumi o projeto sozinha. Os desafio técnicos incluíam mexer com servidor remoto (utilizei um programa para realizar essa conexão e acessar remotamente as pastas da aplicação) + WordPress + Identificar onde estão localizados os caminhos para adição, manutenção do código e de componentes que envolvem Blade, Laravel, HTML e CSS + reportar de forma clara todas as informações para um cliente que não possuía nenhum conhecimento técnico.
+No projeto 2 o desafio técnico envolvia muitas partes pois desde o começo todo o repositório possuía uma documentação mas essa documentação foi analisada por um sênior, posteriormente, e foi constatado que a mesma encontrava-se com erros. Então para conseguir instalar na máquina todas as dependências e fazer o projeto do Docker funcionar demorou bastante tempo.
+
+- Soluções: No projeto 2, para solucionar o desafio técnico foi necessário sempre estar de olho em todas as issues reportadas no GitHub, acessar e encontrar o suposto trecho com problema ou que precisava de modificações/adições/deleções, realizar o teste de confirmação da issue reportada, encontrar no código a correspondência da issue, realizar testes e, por fim, subir para o servidor de homologação. O que ajudou bastante foi estar em chamada com outro programador mais experiente para mostrar os trechos que eu estava trabalhando, o que eu pensei como solução e poder subir as atualizações. No projeto 2 eu utilizar mais PHP, Docker, Git e SQL do que Laravel, nesse aqui não precisei mexer nesses adicionais.
+No projeto 1, as soluções que sempre busquei foram muito estudo, entender com o máximo de detalhes todas as necessidades do projeto e ir testando. Nesse projeto eu mexi mais com Laravel e sempre que algo precisava ser feito eu gostava de testar formas limpas e com bom desempenho para adicionar ao código, verificar se as alterações subiam para as Views, além de deixar alguns comentários para posteriores desenvolvedores de quando foi mexido no trecho e o que tinha por objetivo a adição/remoção/modificação.
+
+- Impacto: No projeto 1, tudo o que fiz até hoje no código e na aplicação continua no ar, o que indica que estão sendo utilizadas as minhas implementações. Algumas coisas ficaram de serem mexidas depois, mas houve um processo migratório de empresas e esse projeto 1 ficou para outra empresa tomar conta.
+No projeto 2 seguiu o mesmo impacto. O pessoal fez uma contratação externa para auxiliar no projeto e depois decidiram manter apenas as pessoas internas.
+
+- Lições aprendidas: A documentação de quaisquer projetos é fundamental! Todas as especificações, instalações, modo de usar são essenciais, ainda que possam parecer óbvias. Dedicação ao estudo precisa ser constante. 
